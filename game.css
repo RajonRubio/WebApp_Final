@@ -1,0 +1,31 @@
+td{
+	background-color: red;
+	/*padding: 5px;
+	margin: 50px;
+	border: 1px solid blue;
+	border-radius: 15px;*/
+}
+body{
+	background-image:url( 'Ubuntu-Wallpaper.png' );
+}
+button{
+	color: red;
+	background-color: gray;
+}
+#title{
+	color: white;
+	font-size: 20px;
+}
+#mytable {
+	background-color: lightblue;
+	padding: 3px;
+	border-radius: 3px;
+}
+#Score {
+	color: white;
+	font-size: 20px;
+}
+#Time {
+	color: red;
+	font-size: 20px;
+}
