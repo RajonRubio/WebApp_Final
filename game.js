@@ -6,7 +6,7 @@
         this.run = 1;
         this.Size = 2;
         this.Time = 60000;
-        this.howbig = 300;
+        this.howbig = 280;
     };
     
     
@@ -32,7 +32,11 @@
                 }
                 document.getElementById("Time").innerHTML = 'Time : ' + this.Time/1000;
             }).bind(this), 100);
-            document.getElementById(""+seedr+"-"+seedc).innerHTML = "<img src='fantrue.png' height='150px' width='150px'>";
+            document.getElementById(""+seedr+"-"+seedc).innerHTML = "<img src='fantrue.png' height='140px' width='140px'>";
+            for(var i=0;i<this.Size*this.Size;i++){
+                document.getElementsByTagName("img")[i].style.height=""+onetdsize+"px" ;
+                document.getElementsByTagName("img")[i].style.width=""+onetdsize+"px" ;
+            }
             document.getElementById(""+seedr+"-"+seedc).addEventListener('click', (function(event) {
                 document.getElementById("yee").play();
                 this.Gotscore(seedr,seedc);
@@ -153,12 +157,13 @@
                     node.id = ""+i+"-"+j+"";
                     var img = document.createElement('img');
                     img.src = 'fanfalse.png';
-                    //img.style.width = ""+onetdsize+"px"
-                    //img.style.height = ""+onetdsize+"px"
+                    img.style.width = ""+onetdsize+"px"
+                    img.style.height = ""+onetdsize+"px"
                     node.appendChild(img);
                     document.getElementById(""+i).appendChild(node);
                } 
             }
+
 
 
             this.score = 0 ;
