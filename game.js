@@ -6,7 +6,7 @@
         this.run = 1;
         this.Size = 2;
         this.Time = 60000;
-        this.howbig = 200;
+        this.howbig = 300;
     };
     
     
@@ -32,7 +32,7 @@
                 }
                 document.getElementById("Time").innerHTML = 'Time : ' + this.Time/1000;
             }).bind(this), 100);
-            document.getElementById(""+seedr+"-"+seedc).innerHTML = "<img src='fantrue.png' >";
+            document.getElementById(""+seedr+"-"+seedc).innerHTML = "<img src='fantrue.png' height='150px' width='150px'>";
             document.getElementById(""+seedr+"-"+seedc).addEventListener('click', (function(event) {
                 document.getElementById("yee").play();
                 this.Gotscore(seedr,seedc);
