@@ -60,12 +60,8 @@
 
             document.getElementById("Score").innerHTML="Your Score : " + this.score ;
 
-            var x = 0;
-            var y = this.run;
-            while(y>=x){
-                y -= x;
-                x++;
-            }
+            var x = this.CheckGrow(this.run);
+            
             if(x>this.Size){
                 this.Size++;
                 var onetdsize = this.howbig/this.Size;
@@ -105,6 +101,15 @@
                 document.getElementById("yee").play();
                 this.Gotscore(seedr,seedc);
             }).bind(this));
+        },
+
+        CheckGrow(run){
+            var x = 0;
+            while(run>=x){
+                run -= x;
+                x++;
+            }
+            return x;
         },
 
         GameOver(myVar){
